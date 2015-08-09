@@ -1,22 +1,24 @@
-# Phase 1: User Authentication, Basic Blogs and Posts
+# Phase 1: User Authentication, Event/Post Creation
 
 ## Rails
 ### Models
 * User
-* Blog
+* Event
+* Thread
 * Post
 
 ### Controllers
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
-* BlogsController (create, new, show)
+* EventsController (create, new, show)
+* ThreadsController (create, new, show)
 * PostsController (create, new, show)
 
 ### Views
 * users/new.html.erb
 * session/new.html.erb
-* blogs/new.html.erb
-* blogs/show.html.erb
+* threads/new.html.erb
+* posts/new.html.erb
 
 ## Backbone
 ### Models

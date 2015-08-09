@@ -1,20 +1,28 @@
-# Phase 4: User Feeds
+# Phase 4: Inviting Users, Signing Up for Events, and Editing Events
 
 ## Rails
 ### Models
+Signup
+Invite
 
 ### Controllers
-Api::PostsController (feed)
+SignupsController (new, create, destroy)
+InvitesController (new, create, destroy)
 
 ### Views
-posts/feed.json.jbuilder
 
 ## Backbone
 ### Models
+Signup
+Invite
 
 ### Collections
+Signups
+Invites
 
 ### Views
-* FeedShow (composite view, contains PostsIndex subview)
+* UserShow (displays pending invites and registered events)
+* EventShow ("Invite User" button, "Sign Up" button, "Edit" button with ActionMailer)
 
 ## Gems/Libraries
+ActionMailer

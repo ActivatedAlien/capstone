@@ -1,29 +1,34 @@
-# Phase 2: Viewing Blogs and Posts
+# Phase 2: Viewing Events/Posts
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (create, destroy, index, show)
-Api::PostsController (create, destroy, show, update)
+Api::EventsController (create, destroy, index, show)
+Api::ThreadsController (create, destroy, index, show)
+Api::PostsController (create, destroy)
 
 ### Views
-* blogs/show.json.jbuilder
+* events/show.json.jbuilder
+* threads/show.json.jbuilder
 
 ## Backbone
 ### Models
-* Blog (parses nested `posts` association)
+* Event
+* Thread (parses nested `posts` association)
 * Post
 
 ### Collections
-* Blogs
+* Events
+* Threads
 * Posts
 
 ### Views
-* BlogForm
-* BlogShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subviews)
+* EventShow
+* EventsIndex
+* ThreadForm
+* ThreadShow (composite view, contains PostsIndex subview)
+* PostsIndex (composite view, contains PostsIndexItem subview)
 * PostsIndexItem
-* PostShow
 
 ## Gems/Libraries

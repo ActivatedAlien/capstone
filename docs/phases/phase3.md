@@ -1,4 +1,4 @@
-# Phase 3: Editing and Displaying Posts
+# Phase 3: Editing and Displaying Events/Posts
 
 ## Rails
 ### Models
@@ -13,6 +13,7 @@
 ### Collections
 
 ### Views
+* EventForm
 * PostForm
 
 ## Gems/Libraries

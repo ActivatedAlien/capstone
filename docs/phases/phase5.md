@@ -1,11 +1,10 @@
-# Phase 5: Searching for Blogs and Posts
+# Phase 5: Google Maps API, Searching for Events
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (search)
-Api::PostsController (search)
+Api::EventsController (search)
 
 ### Views
 
@@ -15,8 +14,8 @@ Api::PostsController (search)
 ### Collections
 
 ### Views
-* BlogSearchItem
-* SearchShow (composite view, contains BlogsIndex and PostsIndex subviews)
+* EventSearchItem
+* SearchShow (composite view, contains EventsIndex subviews)
 
 ## Gems/Libraries
-
+Google Maps
