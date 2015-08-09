@@ -27,8 +27,7 @@ Api::PostsController (create, destroy)
 * EventShow
 * EventsIndex
 * ThreadForm
-* ThreadShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subview)
-* PostsIndexItem
+* ThreadShow (composite view, contains PostShow subview)
+* PostShow
 
 ## Gems/Libraries
