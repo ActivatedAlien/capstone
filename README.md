@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]: https://mafiawithstrangers.herokuapp.com/
 
 ## Minimum Viable Product
 Mafia with Strangers brings together strangers for great games of Mafia. Users can:
