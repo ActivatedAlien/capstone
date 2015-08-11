@@ -628,3 +628,47 @@ Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.6ms)
   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 2]]
   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (10.9ms)[0m  INSERT INTO "users" ("email", "password_digest", "username", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "Test"], ["password_digest", "$2a$10$UKhNCivCLl3OyoNtnfkJHeWqvSL7VLUYflKngEYMoYuU8h2mC8ASa"], ["username", "test"], ["session_token", "cN-zzzoLYj2gFezGOb2x1Q"], ["created_at", "2015-08-11 17:02:05.666939"], ["updated_at", "2015-08-11 17:02:05.666939"]]
+  [1m[36m (41.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSQL (39.5ms)[0m  [1mINSERT INTO "forums" ("author_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 3], ["title", "Test Forum"], ["created_at", "2015-08-11 17:02:42.095648"], ["updated_at", "2015-08-11 17:02:42.095648"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+PG::UndefinedColumn: ERROR:  column forums.user_id does not exist
+LINE 1: SELECT "forums".* FROM "forums" WHERE "forums"."user_id" = $...
+                                              ^
+: SELECT "forums".* FROM "forums" WHERE "forums"."user_id" = $1
+PG::UndefinedColumn: ERROR:  column forums.user_id does not exist
+LINE 1: SELECT "forums".* FROM "forums" WHERE "forums"."user_id" = $...
+                                              ^
+: SELECT "forums".* FROM "forums" WHERE "forums"."user_id" = $1
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mForum Load (0.4ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."author_id" = $1  [["author_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mForum Load (0.4ms)[0m  [1mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mForum Load (0.3ms)[0m  [1mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (352.9ms)[0m  INSERT INTO "posts" ("forum_id", "author_id", "title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["forum_id", 1], ["author_id", 3], ["title", "Post"], ["body", "For reals"], ["created_at", "2015-08-11 17:04:16.807680"], ["updated_at", "2015-08-11 17:04:16.807680"]]
+  [1m[36m (80.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mForum Load (0.4ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."author_id" = $1[0m  [["author_id", 3]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 3]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" ASC LIMIT 1[0m
+  [1m[35mForum Load (0.3ms)[0m  SELECT  "forums".* FROM "forums" WHERE "forums"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mForum Load (0.6ms)[0m  [1mSELECT  "forums".* FROM "forums"  ORDER BY "forums"."id" ASC LIMIT 1[0m
+  [1m[35mForum Load (0.3ms)[0m  SELECT  "forums".* FROM "forums"  ORDER BY "forums"."id" ASC LIMIT 1
+  [1m[36mForum Load (0.5ms)[0m  [1mSELECT  "forums".* FROM "forums"  ORDER BY "forums"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."forum_id" = $1  [["forum_id", 1]]

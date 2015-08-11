@@ -5,9 +5,9 @@ class User < ActiveRecord::Base
 
   attr_reader :password
 
-  has_many :posts
-  has_many :events
-  has_many :forums
+  has_many :posts, foreign_key: :author_id
+  has_many :events, foreign_key: :owner_id
+  has_many :forums, foreign_key: :author_id
 
   def password=(password)
     @password = password
