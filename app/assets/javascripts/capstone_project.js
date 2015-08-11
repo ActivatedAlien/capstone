@@ -4,7 +4,9 @@ window.CapstoneProject = {
   Views: {},
   Routers: {},
   initialize: function() {
-    new CapstoneProject.Routers.Router();
+    new CapstoneProject.Routers.Router({
+      $rootEl: $(".content")
+    });
     Backbone.history.start();
   }
 };
