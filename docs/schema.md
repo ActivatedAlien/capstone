@@ -1,6 +1,6 @@
 # Schema Information
 
-## threads
+## forums
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
@@ -12,7 +12,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users)
-thread_id   | integer   | not null, foreign key (references threads)
+forum_id    | integer   | not null, foreign key (references threads)
 title       | string    | not null
 body        | string    | not null
 

@@ -5,28 +5,28 @@
 
 ### Controllers
 Api::EventsController (index, show)
-Api::ThreadsController (index, show)
+Api::ForumsController (index, show)
 
 ### Views
 * events/show.json.jbuilder
-* threads/show.json.jbuilder
+* forums/show.json.jbuilder
 
 ## Backbone
 ### Models
 * Event
-* Thread (parses nested `posts` association)
+* Forum (parses nested `posts` association)
 * Post
 
 ### Collections
 * Events
-* Threads
+* Forums
 * Posts
 
 ### Views
 * EventShow
 * EventsIndex
-* ThreadForm
-* ThreadShow (composite view, contains PostShow subview)
+* ForumForm
+* ForumShow (composite view, contains PostShow subview)
 * PostShow
 * PostForm
 

@@ -11,7 +11,7 @@
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
 * Api::EventsController (create, destroy)
-* Api::ThreadsController (create, destroy)
+* Api::ForumsController (create, destroy)
 * Api::PostsController (create, destroy)
 
 ### Views

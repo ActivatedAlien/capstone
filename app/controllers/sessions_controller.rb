@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
       login!(@user)
       redirect_to user_url(@user)
     else
-      flash.now[:error] = @user.errors.full_messages
       redirect_to new_session_url
     end
   end
