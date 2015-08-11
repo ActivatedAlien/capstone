@@ -8,6 +8,16 @@ class Api::EventsController < ApplicationController
     end
   end
 
+  def index
+    @events = current_user.events
+    render json: @events
+  end
+
+  def show
+    @event = Event.find(params[:id])
+    render json: @event
+  end
+
   def destroy
     @event = Event.find(params[:id])
     @event.destroy!

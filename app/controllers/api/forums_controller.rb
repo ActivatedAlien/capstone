@@ -8,6 +8,16 @@ class Api::ForumsController < ApplicationController
     end
   end
 
+  def index
+    @forums = Forum.all
+    render json: @forums
+  end
+
+  def show
+    @forum = Forum.find(params[:id])
+    render json: @forum
+  end
+
   def destroy
     @forum = Forum.find(params[:id])
     @forum.destroy!
