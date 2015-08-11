@@ -6,8 +6,8 @@ Signup
 Invite
 
 ### Controllers
-SignupsController (new, create, destroy)
-InvitesController (new, create, destroy)
+Api::SignupsController (create, destroy)
+Api::InvitesController (create, destroy)
 
 ### Views
 

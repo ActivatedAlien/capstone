@@ -10,9 +10,9 @@
 ### Controllers
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
-* EventsController (create, new, show)
-* ThreadsController (create, new, show)
-* PostsController (create, new, show)
+* Api::EventsController (create, destroy)
+* Api::ThreadsController (create, destroy)
+* Api::PostsController (create, destroy)
 
 ### Views
 * users/new.html.erb

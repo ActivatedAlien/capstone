@@ -4,9 +4,8 @@
 ### Models
 
 ### Controllers
-Api::EventsController (create, destroy, index, show)
-Api::ThreadsController (create, destroy, index, show)
-Api::PostsController (create, destroy)
+Api::EventsController (index, show)
+Api::ThreadsController (index, show)
 
 ### Views
 * events/show.json.jbuilder

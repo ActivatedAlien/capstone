@@ -37,8 +37,8 @@ attendee_id | integer   | not null, foreign key (references users)
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-requester_id| integer   | not null, foreign key (references users)
 invitee_id  | integer   | not null, foreign key (references users)
+event_id    | integer   | not null, foreign key (references events)
 
 ## users
 column name     | data type | details
