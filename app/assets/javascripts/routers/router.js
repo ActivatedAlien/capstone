@@ -25,7 +25,9 @@ CapstoneProject.Routers.Router = Backbone.Router.extend({
   },
 
   forumShow: function(id) {
-
+    var forum = this.forums.getOrFetch(id);
+    var view = new CapstoneProject.Views.ForumShow({ model: forum });
+    this._swapView(view);
   },
 
   eventShow: function(id) {

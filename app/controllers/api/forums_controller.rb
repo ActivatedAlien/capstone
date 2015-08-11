@@ -15,7 +15,7 @@ class Api::ForumsController < ApplicationController
 
   def show
     @forum = Forum.find(params[:id])
-    render json: @forum
+    render :show
   end
 
   def destroy
