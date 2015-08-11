@@ -1,6 +1,8 @@
 class Api::ForumsController < ApplicationController
   def create
     @forum = Forum.new(forum_params)
+    @forum.author_id = current_user.id
+
     if @forum.save
       render json: @forum
     else

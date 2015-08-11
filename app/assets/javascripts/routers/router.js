@@ -9,7 +9,7 @@ CapstoneProject.Routers.Router = Backbone.Router.extend({
     "": "eventIndex",
     "forums": "forumIndex",
     "forums/:id": "forumShow",
-    "events/:id": "eventShow"
+    "events/:id": "eventShow",
   },
 
   eventIndex: function() {

@@ -16,6 +16,12 @@ CapstoneProject.Views.ForumIndex = Backbone.CompositeView.extend({
         view.addSubview(".forum-index", subView);
       });
 
+      var formView = new CapstoneProject.Views.ForumForm({
+        model: new CapstoneProject.Models.Forum(),
+        collection: this.collection
+      });
+      view.addSubview(".new-forum", formView);
+
       return this;
     }
 });
