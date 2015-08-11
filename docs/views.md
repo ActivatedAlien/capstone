@@ -7,13 +7,13 @@
 ![user-show]
 
 ## Threads Index
-![thread-show]
+![threads-index]
 
 ## Thread Form
 ![thread-form]
 
 ## Thread Show
-![post-show]
+![thread-show]
 
 ## Post Form
 ![post-form]
