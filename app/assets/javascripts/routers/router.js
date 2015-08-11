@@ -8,8 +8,8 @@ CapstoneProject.Routers.Router = Backbone.Router.extend({
   routes: {
     "": "eventIndex",
     "forums": "forumIndex",
-    "forum/:id": "forumShow",
-    "event/:id": "eventShow"
+    "forums/:id": "forumShow",
+    "events/:id": "eventShow"
   },
 
   eventIndex: function() {
@@ -29,7 +29,9 @@ CapstoneProject.Routers.Router = Backbone.Router.extend({
   },
 
   eventShow: function(id) {
-
+    var event = this.events.getOrFetch(id);
+    var view = new CapstoneProject.Views.EventShow({ model: event });
+    this._swapView(view);
   },
 
   _swapView: function(view) {
