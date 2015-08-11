@@ -17,8 +17,6 @@
 ### Views
 * users/new.html.erb
 * session/new.html.erb
-* threads/new.html.erb
-* posts/new.html.erb
 
 ## Backbone
 ### Models

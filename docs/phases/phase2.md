@@ -28,5 +28,6 @@ Api::ThreadsController (index, show)
 * ThreadForm
 * ThreadShow (composite view, contains PostShow subview)
 * PostShow
+* PostForm
 
 ## Gems/Libraries
