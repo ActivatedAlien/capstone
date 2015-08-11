@@ -24,6 +24,7 @@ gem 'bcrypt'
 gem 'backbone-on-rails'
 gem 'serialize_json-rails'
 gem 'ejs'
+gem 'newrelic_rpm'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

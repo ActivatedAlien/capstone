@@ -1,0 +1,2 @@
+I"
+function(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<a href="#/events/',  event.id ,'">\n  ',  event.escape("owner_id") ,'\n  ',  event.escape("time") ,'\n  ',  event.escape("address") ,'\n</a>\n');}return __p.join('');}:ET
