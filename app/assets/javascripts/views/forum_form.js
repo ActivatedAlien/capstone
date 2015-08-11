@@ -17,12 +17,11 @@ CapstoneProject.Views.ForumForm = Backbone.View.extend({
     event.preventDefault();
     var attrs = $(event.currentTarget).serializeJSON().forum;
     var forum = this.model, forums = this.collection;
-    this.model.set(attrs);
+    forum.set(attrs);
 
     forum.save(attrs, {
       success: function() {
         forums.add(forum);
-        Backbone.history.navigate("#/forums/" + forum.id, { trigger: true});
       }
     });
   }

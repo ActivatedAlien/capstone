@@ -17,8 +17,8 @@ CapstoneProject.Views.ForumShow = Backbone.CompositeView.extend({
         var subView = new CapstoneProject.Views.PostItem({ model: post });
         view.addSubview(".posts", subView);
       });
-
       var postFormView = new CapstoneProject.Views.PostForm({
+        forum: this.model,
         model: new CapstoneProject.Models.Post(),
         collection: this.posts
       });
