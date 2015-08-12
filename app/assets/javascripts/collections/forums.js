@@ -19,3 +19,5 @@ CapstoneProject.Collections.Forums = Backbone.Collection.extend({
     return forum;
   }
 });
+
+CapstoneProject.Collections.forums = new CapstoneProject.Collections.Forums();

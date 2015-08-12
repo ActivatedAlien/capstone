@@ -1,8 +1,8 @@
 CapstoneProject.Routers.Router = Backbone.Router.extend({
   initialize: function(options) {
     this.$rootEl = options.$rootEl;
-    this.events = new CapstoneProject.Collections.Events();
-    this.forums = new CapstoneProject.Collections.Forums();
+    this.events = options.events;
+    this.forums = options.forums;
   },
 
   routes: {

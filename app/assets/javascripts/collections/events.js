@@ -19,3 +19,5 @@ CapstoneProject.Collections.Events = Backbone.Collection.extend({
     return event;
   }
 });
+
+CapstoneProject.Collections.events = new CapstoneProject.Collections.Events();

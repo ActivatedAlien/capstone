@@ -188,3 +188,43 @@
 [08/11/15 15:02:29 -0700 Ankits-MacBook-Pro.local (1245)] INFO : Installing Rails 4 view instrumentation
 [08/11/15 15:02:29 -0700 Ankits-MacBook-Pro.local (1245)] INFO : Installing Rails 4 Error instrumentation
 [08/11/15 15:02:29 -0700 Ankits-MacBook-Pro.local (1245)] INFO : Finished instrumentation
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Starting the New Relic agent in "development" environment.
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] WARN : No configuration file found. Working directory = /Users/theinnformaster/Desktop/AppAcademy/capstone-project
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] WARN : Looked in these locations (based on defaults): /Users/theinnformaster/Desktop/AppAcademy/capstone-project/config/newrelic.yml, /Users/theinnformaster/Desktop/AppAcademy/capstone-project/newrelic.yml, /Users/theinnformaster/Desktop/AppAcademy/capstone-project/config/newrelic.yml, /Users/theinnformaster/Desktop/AppAcademy/capstone-project/newrelic.yml, /Users/theinnformaster/.newrelic/newrelic.yml, /Users/theinnformaster/newrelic.yml
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Environment: development
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : No known dispatcher detected.
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Application: development
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Installing ActiveJob instrumentation
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Installing ActiveRecord 4 instrumentation
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Installing Net instrumentation
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Installing deferred Rack instrumentation
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Installing Rack::Builder middleware instrumentation
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Installing Rails 3+ middleware instrumentation
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Installing Rails 4 Controller instrumentation
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Installing Rails 4 view instrumentation
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Installing Rails 4 Error instrumentation
+[08/11/15 17:11:35 -0700 Ankits-MacBook-Pro.local (1773)] INFO : Finished instrumentation
+[08/11/15 17:13:45 -0700 Ankits-MacBook-Pro.local (1175)] INFO : Starting Agent shutdown
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Starting the New Relic agent in "development" environment.
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] WARN : No configuration file found. Working directory = /Users/theinnformaster/Desktop/AppAcademy/capstone-project
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] WARN : Looked in these locations (based on defaults): /Users/theinnformaster/Desktop/AppAcademy/capstone-project/config/newrelic.yml, /Users/theinnformaster/Desktop/AppAcademy/capstone-project/newrelic.yml, /Users/theinnformaster/Desktop/AppAcademy/capstone-project/config/newrelic.yml, /Users/theinnformaster/Desktop/AppAcademy/capstone-project/newrelic.yml, /Users/theinnformaster/.newrelic/newrelic.yml, /Users/theinnformaster/newrelic.yml
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Environment: development
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Dispatcher: webrick
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Application: development
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Installing ActiveJob instrumentation
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Installing ActiveRecord 4 instrumentation
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Installing Net instrumentation
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Installing deferred Rack instrumentation
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Installing Rack::Builder middleware instrumentation
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Installing Rails 3+ middleware instrumentation
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Installing Rails 4 Controller instrumentation
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Installing Rails 4 view instrumentation
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Installing Rails 4 Error instrumentation
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Finished instrumentation
+[08/11/15 17:13:48 -0700 Ankits-MacBook-Pro.local (1808)] INFO : Doing deferred dependency-detection before Rack startup
+[08/11/15 17:13:53 -0700 Ankits-MacBook-Pro.local (1808)] ERROR : Invalid license key, please contact support@newrelic.com
+[08/11/15 17:13:53 -0700 Ankits-MacBook-Pro.local (1808)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
