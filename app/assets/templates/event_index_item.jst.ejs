@@ -1,5 +1,5 @@
-<a href="#/events/<%= event.id %>">
-  <%= event.escape("owner_id") %>
-  <%= event.escape("time") %>
+<a class="list-group-item" href="#/events/<%= event.id %>">
+  <%= new Date(event.escape("time")).toLocaleString() %>
+  <br>
   <%= event.escape("address") %>
 </a>

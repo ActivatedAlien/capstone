@@ -18738,3 +18738,2686 @@ Processing by Api::EventsController#index as JSON
   [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
   [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
 Completed 200 OK in 60ms (Views: 17.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/events/3" for ::1 at 2015-08-12 11:41:47 -0700
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 12ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:41:52 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (6.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 41ms (Views: 8.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:41:52 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 42ms (Views: 11.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/events/3" for ::1 at 2015-08-12 11:41:53 -0700
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 24ms (Views: 3.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:41:54 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 35ms (Views: 7.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:41:54 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 40ms (Views: 12.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events/3" for ::1 at 2015-08-12 11:42:01 -0700
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 11ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:42:04 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 23ms (Views: 8.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:42:04 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 27ms (Views: 10.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 11:44:43 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (101.5ms)
+Completed 200 OK in 2137ms (Views: 2131.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 11:44:46 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 11:44:46 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 11:44:46 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 11:44:46 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 11:44:47 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 11:44:47 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 11:44:47 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 11:44:47 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 11:44:47 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 11:44:47 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 11:44:48 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 11:44:48 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 11:44:48 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 11:44:48 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 11:44:48 -0700
+
+
+Started GET "/assets/event_index.self-17d257a396a6ed93540915337e58760c2adb4ceb9cb6f345da86b869fabf65fe.js?body=1" for ::1 at 2015-08-12 11:44:48 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 11:44:48 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 11:44:48 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 11:44:49 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 11:44:49 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 11:44:49 -0700
+
+
+Started GET "/assets/event_index_item.self-4cd23ad67d297833f8c3fda53fbfd0d547644fce264d82b1932b1e6270cbb730.js?body=1" for ::1 at 2015-08-12 11:44:49 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 11:44:49 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 11:44:49 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 11:44:49 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 11:44:50 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 11:44:50 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 11:44:50 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 11:44:50 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 11:44:50 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 11:44:50 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 11:44:50 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 11:44:50 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 11:44:51 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 11:44:51 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 11:44:51 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 11:44:51 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 11:44:51 -0700
+
+
+Started GET "/assets/views/event_index_item.self-b6f9d65334f873ad3d06ab70e20d4bc5870e8f9b5a4284257e65c753f0ffbe80.js?body=1" for ::1 at 2015-08-12 11:44:51 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 11:44:51 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 11:44:51 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 11:44:52 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 11:44:52 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 11:44:52 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 11:44:52 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 11:44:52 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 11:44:52 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 11:44:52 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:44:52 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:44:53 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:44:53 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:44:53 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:44:53 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:44:53 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:44:53 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:44:53 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 11:44:54 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:44:54 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 265ms (Views: 46.6ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:44:54 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 189ms (Views: 83.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 11:46:01 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 18200ms (Views: 18197.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-21d4988cc8c92058d62e724980ef265b14fdcf46f8101b3293a6079557fff240.css?body=1" for ::1 at 2015-08-12 11:46:19 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 11:46:19 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 11:46:19 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 11:46:20 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 11:46:20 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 11:46:20 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 11:46:20 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 11:46:20 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 11:46:20 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 11:46:20 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 11:46:20 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 11:46:20 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 11:46:21 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 11:46:21 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 11:46:21 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 11:46:21 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 11:46:21 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 11:46:21 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 11:46:21 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 11:46:21 -0700
+
+
+Started GET "/assets/event_index.self-17d257a396a6ed93540915337e58760c2adb4ceb9cb6f345da86b869fabf65fe.js?body=1" for ::1 at 2015-08-12 11:46:21 -0700
+
+
+Started GET "/assets/event_index_item.self-4cd23ad67d297833f8c3fda53fbfd0d547644fce264d82b1932b1e6270cbb730.js?body=1" for ::1 at 2015-08-12 11:46:21 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 11:46:22 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 11:46:22 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 11:46:22 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 11:46:22 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 11:46:22 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 11:46:22 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 11:46:22 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 11:46:22 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 11:46:22 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 11:46:22 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/views/event_index_item.self-b6f9d65334f873ad3d06ab70e20d4bc5870e8f9b5a4284257e65c753f0ffbe80.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 11:46:23 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:46:24 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:46:25 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:46:25 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 11:46:25 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:46:25 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 36ms (Views: 13.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:46:25 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 51ms (Views: 18.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 11:51:17 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 1839ms (Views: 1836.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 11:51:19 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 11:51:19 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 11:51:19 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 11:51:19 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 11:51:20 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 11:51:20 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 11:51:20 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 11:51:20 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 11:51:20 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 11:51:20 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 11:51:20 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 11:51:20 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 11:51:20 -0700
+
+
+Started GET "/assets/event_index.self-4db4eda19f9524e67aeb0165b165c80e8ae823c56ae37dcd706c54c7fc440f0d.js?body=1" for ::1 at 2015-08-12 11:51:21 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 11:51:21 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 11:51:21 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 11:51:21 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 11:51:21 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 11:51:21 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 11:51:21 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 11:51:21 -0700
+
+
+Started GET "/assets/event_index_item.self-4cd23ad67d297833f8c3fda53fbfd0d547644fce264d82b1932b1e6270cbb730.js?body=1" for ::1 at 2015-08-12 11:51:21 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 11:51:22 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 11:51:23 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 11:51:23 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 11:51:23 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 11:51:23 -0700
+
+
+Started GET "/assets/views/event_index_item.self-c2671cfdf2956dbbe9e0562924309cb84975d04bc7b437ad8ee7f0bfd6d0a663.js?body=1" for ::1 at 2015-08-12 11:51:23 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 11:51:23 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 11:51:23 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 11:51:23 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 11:51:23 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 11:51:23 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 11:51:24 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 11:51:24 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 11:51:24 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 11:51:24 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 11:51:24 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:51:24 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:51:24 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:51:24 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:51:24 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:51:24 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:51:25 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:51:25 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:51:25 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 11:51:25 -0700
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:51:25 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 61ms (Views: 18.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:51:25 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 46ms (Views: 23.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 11:51:59 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1764ms (Views: 1760.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 11:52:00 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 11:52:01 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 11:52:01 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 11:52:01 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 11:52:01 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 11:52:01 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 11:52:01 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 11:52:01 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 11:52:01 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 11:52:02 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 11:52:02 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 11:52:02 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 11:52:02 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 11:52:02 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 11:52:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 11:52:02 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 11:52:02 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 11:52:02 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 11:52:03 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 11:52:03 -0700
+
+
+Started GET "/assets/event_index.self-4db4eda19f9524e67aeb0165b165c80e8ae823c56ae37dcd706c54c7fc440f0d.js?body=1" for ::1 at 2015-08-12 11:52:03 -0700
+
+
+Started GET "/assets/event_index_item.self-4cd23ad67d297833f8c3fda53fbfd0d547644fce264d82b1932b1e6270cbb730.js?body=1" for ::1 at 2015-08-12 11:52:03 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 11:52:03 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 11:52:03 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 11:52:03 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 11:52:03 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 11:52:03 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 11:52:03 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 11:52:04 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 11:52:04 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 11:52:04 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 11:52:04 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 11:52:04 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 11:52:04 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 11:52:04 -0700
+
+
+Started GET "/assets/views/event_index_item.self-f0e6c9086f744f28c9096a66cc5b41159592ae4d9ed230d8d2356c976aee7876.js?body=1" for ::1 at 2015-08-12 11:52:04 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 11:52:04 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 11:52:05 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 11:52:05 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 11:52:05 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 11:52:05 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 11:52:05 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 11:52:05 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 11:52:05 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 11:52:05 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 11:52:05 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 11:52:05 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 11:52:06 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:06 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:06 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:06 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:06 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:06 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:06 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:06 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:06 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 11:52:07 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:52:07 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (1.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 54ms (Views: 29.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:52:07 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (1.5ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 49ms (Views: 26.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/events/3" for ::1 at 2015-08-12 11:52:11 -0700
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mEvent Load (0.8ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 22ms (Views: 6.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:52:13 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 53ms (Views: 13.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:52:13 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (1.0ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 58ms (Views: 32.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 11:52:39 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 2095ms (Views: 2093.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 11:52:42 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 11:52:42 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 11:52:42 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 11:52:42 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 11:52:42 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 11:52:42 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 11:52:42 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 11:52:42 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 11:52:43 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 11:52:43 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 11:52:43 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 11:52:43 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 11:52:43 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 11:52:43 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 11:52:43 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 11:52:43 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 11:52:44 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 11:52:44 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 11:52:44 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 11:52:44 -0700
+
+
+Started GET "/assets/event_index.self-4db4eda19f9524e67aeb0165b165c80e8ae823c56ae37dcd706c54c7fc440f0d.js?body=1" for ::1 at 2015-08-12 11:52:44 -0700
+
+
+Started GET "/assets/event_index_item.self-4cd23ad67d297833f8c3fda53fbfd0d547644fce264d82b1932b1e6270cbb730.js?body=1" for ::1 at 2015-08-12 11:52:44 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 11:52:44 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 11:52:44 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 11:52:44 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 11:52:45 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 11:52:45 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 11:52:45 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 11:52:45 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 11:52:45 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 11:52:45 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 11:52:45 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 11:52:45 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 11:52:45 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 11:52:46 -0700
+
+
+Started GET "/assets/views/event_index_item.self-6588881c89ecbe05c11c15ecad9c4c8a06009ee1e8396cfc1287d85fbf9c6902.js?body=1" for ::1 at 2015-08-12 11:52:46 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 11:52:46 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 11:52:46 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 11:52:46 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 11:52:46 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 11:52:46 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 11:52:46 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 11:52:46 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 11:52:47 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 11:52:47 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 11:52:47 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 11:52:47 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 11:52:47 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:47 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:47 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:47 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:47 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:47 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:48 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:48 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:52:48 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 11:52:48 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:52:48 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 36ms (Views: 11.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:52:48 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 53ms (Views: 17.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 11:53:08 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 3257ms (Views: 3252.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 11:53:11 -0700
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 11:53:11 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 11:53:12 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 11:53:12 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 11:53:12 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 11:53:12 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 11:53:12 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 11:53:12 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 11:53:12 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 11:53:12 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 11:53:13 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 11:53:13 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 11:53:13 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 11:53:13 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 11:53:13 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 11:53:13 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 11:53:13 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 11:53:13 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 11:53:13 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 11:53:14 -0700
+
+
+Started GET "/assets/event_index.self-4db4eda19f9524e67aeb0165b165c80e8ae823c56ae37dcd706c54c7fc440f0d.js?body=1" for ::1 at 2015-08-12 11:53:14 -0700
+
+
+Started GET "/assets/event_index_item.self-4cd23ad67d297833f8c3fda53fbfd0d547644fce264d82b1932b1e6270cbb730.js?body=1" for ::1 at 2015-08-12 11:53:14 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 11:53:14 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 11:53:14 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 11:53:14 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 11:53:14 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 11:53:14 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 11:53:14 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 11:53:15 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 11:53:15 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 11:53:15 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 11:53:15 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 11:53:15 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 11:53:15 -0700
+
+
+Started GET "/assets/views/event_index_item.self-3e4fbb035f4ba60a88cf54a6f5ad627ef941842b51aa029d836fc3ae0e9e61e9.js?body=1" for ::1 at 2015-08-12 11:53:15 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 11:53:15 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 11:53:15 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 11:53:16 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 11:53:16 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 11:53:16 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 11:53:16 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 11:53:16 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 11:53:16 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 11:53:16 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 11:53:16 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 11:53:16 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 11:53:17 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 11:53:17 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:53:17 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:53:17 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:53:17 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:53:17 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:53:17 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:53:17 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:53:17 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:53:17 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 11:53:18 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:53:18 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 58ms (Views: 13.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:53:18 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 53ms (Views: 32.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 11:54:14 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 1997ms (Views: 1994.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 11:54:16 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 11:54:17 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 11:54:17 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 11:54:17 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 11:54:17 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 11:54:17 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 11:54:17 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 11:54:18 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 11:54:18 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 11:54:18 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 11:54:18 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 11:54:18 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 11:54:18 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 11:54:18 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 11:54:18 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 11:54:19 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 11:54:19 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 11:54:19 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 11:54:19 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 11:54:19 -0700
+
+
+Started GET "/assets/event_index.self-4db4eda19f9524e67aeb0165b165c80e8ae823c56ae37dcd706c54c7fc440f0d.js?body=1" for ::1 at 2015-08-12 11:54:19 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 11:54:19 -0700
+
+
+Started GET "/assets/event_index_item.self-4cd23ad67d297833f8c3fda53fbfd0d547644fce264d82b1932b1e6270cbb730.js?body=1" for ::1 at 2015-08-12 11:54:19 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 11:54:20 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 11:54:20 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 11:54:20 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 11:54:20 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 11:54:20 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 11:54:20 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 11:54:20 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 11:54:20 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 11:54:20 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 11:54:21 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 11:54:21 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 11:54:21 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 11:54:21 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 11:54:21 -0700
+
+
+Started GET "/assets/views/event_index_item.self-5a36b46cca10db805249c95d2586b9ddbfff8cf41e0a55d46436b0c4dd50eb45.js?body=1" for ::1 at 2015-08-12 11:54:21 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 11:54:21 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 11:54:21 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 11:54:21 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 11:54:22 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 11:54:22 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 11:54:22 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 11:54:22 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 11:54:22 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 11:54:22 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 11:54:22 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:54:22 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:54:22 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:54:23 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:54:23 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:54:23 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:54:23 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:54:23 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:54:23 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 11:54:23 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:54:23 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 37ms (Views: 11.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:54:24 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 55ms (Views: 33.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 11:57:49 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 2105ms (Views: 2103.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 11:57:52 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 11:57:52 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 11:57:52 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 11:57:52 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 11:57:52 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 11:57:52 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 11:57:52 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 11:57:52 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 11:57:52 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 11:57:53 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 11:57:53 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 11:57:53 -0700
+
+
+Started GET "/assets/event_index.self-f7848456f5d004796bca6e0345194d2692e96e84de9f33d55576ee42d9180e64.js?body=1" for ::1 at 2015-08-12 11:57:53 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 11:57:53 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 11:57:53 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 11:57:53 -0700
+
+
+Started GET "/assets/event_index_item.self-8f99bd9c6a1fee986f8b58d4a72b617b10714f21f0a8e9042936b88427a1cdbb.js?body=1" for ::1 at 2015-08-12 11:57:53 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 11:57:53 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 11:57:54 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 11:57:55 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 11:57:55 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 11:57:55 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 11:57:55 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 11:57:55 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 11:57:55 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 11:57:55 -0700
+
+
+Started GET "/assets/views/event_index_item.self-1b5f3887294dccbd5a19adcba60fb85dc0e06626ccef4b7c72d35cca1f23f3c3.js?body=1" for ::1 at 2015-08-12 11:57:55 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 11:57:55 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 11:57:55 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:57:56 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:57:57 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:57:57 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:57:57 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:57:57 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:57:57 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 11:57:57 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 11:57:57 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:57:57 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (1.0ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 42ms (Views: 13.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:57:57 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 58ms (Views: 33.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/events/3" for ::1 at 2015-08-12 11:58:12 -0700
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 17ms (Views: 5.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:58:13 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 44ms (Views: 17.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:58:13 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 33ms (Views: 11.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/events/3" for ::1 at 2015-08-12 11:58:16 -0700
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 17ms (Views: 6.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 11:58:17 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 35ms (Views: 13.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 11:58:18 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 54ms (Views: 29.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 14:13:30 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 1220ms (Views: 1218.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 14:13:31 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 14:13:32 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 14:13:32 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 14:13:32 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 14:13:32 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 14:13:32 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 14:13:32 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 14:13:32 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 14:13:32 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 14:13:32 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/event_index_item.self-8f99bd9c6a1fee986f8b58d4a72b617b10714f21f0a8e9042936b88427a1cdbb.js?body=1" for ::1 at 2015-08-12 14:13:33 -0700
+
+
+Started GET "/assets/event_index.self-f7848456f5d004796bca6e0345194d2692e96e84de9f33d55576ee42d9180e64.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 14:13:34 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/views/event_index_item.self-1b5f3887294dccbd5a19adcba60fb85dc0e06626ccef4b7c72d35cca1f23f3c3.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 14:13:35 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 14:13:36 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 14:13:36 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 14:13:36 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 14:13:36 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 14:13:36 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:13:36 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:13:36 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:13:36 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:13:36 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:13:36 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:13:37 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:13:37 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:13:37 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 14:13:37 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 14:13:37 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (1.8ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 47ms (Views: 17.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 14:13:37 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 50ms (Views: 28.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/events/3" for ::1 at 2015-08-12 14:13:40 -0700
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 29ms (Views: 7.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 14:13:41 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 37ms (Views: 14.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 14:13:41 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 39ms (Views: 17.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 14:15:21 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 1240ms (Views: 1238.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-21d4988cc8c92058d62e724980ef265b14fdcf46f8101b3293a6079557fff240.css?body=1" for ::1 at 2015-08-12 14:15:22 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 14:15:22 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 14:15:23 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 14:15:23 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 14:15:23 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 14:15:23 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 14:15:23 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 14:15:23 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 14:15:23 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 14:15:23 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 14:15:23 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 14:15:24 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 14:15:24 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 14:15:24 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 14:15:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 14:15:24 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 14:15:24 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 14:15:24 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 14:15:24 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 14:15:24 -0700
+
+
+Started GET "/assets/event_index.self-f7848456f5d004796bca6e0345194d2692e96e84de9f33d55576ee42d9180e64.js?body=1" for ::1 at 2015-08-12 14:15:24 -0700
+
+
+Started GET "/assets/event_index_item.self-8f99bd9c6a1fee986f8b58d4a72b617b10714f21f0a8e9042936b88427a1cdbb.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 14:15:25 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/views/event_index_item.self-1b5f3887294dccbd5a19adcba60fb85dc0e06626ccef4b7c72d35cca1f23f3c3.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 14:15:26 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:15:27 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 14:15:28 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 14:15:28 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 48ms (Views: 12.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 14:15:28 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 38ms (Views: 15.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 14:17:19 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 1674ms (Views: 1671.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 14:17:21 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 14:17:21 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 14:17:21 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 14:17:21 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 14:17:21 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 14:17:21 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 14:17:21 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 14:17:21 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 14:17:22 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 14:17:22 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 14:17:22 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 14:17:22 -0700
+
+
+Started GET "/assets/event_index_item.self-b5eed5b58ef8d7ed4d7bdbf5b62eb479a4d6dbf3a051c01d9deeba2d5337d0de.js?body=1" for ::1 at 2015-08-12 14:17:22 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 14:17:22 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 14:17:22 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 14:17:22 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 14:17:22 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/event_index.self-f7848456f5d004796bca6e0345194d2692e96e84de9f33d55576ee42d9180e64.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 14:17:23 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 14:17:24 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 14:17:24 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 14:17:24 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 14:17:24 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 14:17:24 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 14:17:24 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 14:17:24 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 14:17:24 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 14:17:24 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 14:17:24 -0700
+
+
+Started GET "/assets/views/event_index_item.self-1b5f3887294dccbd5a19adcba60fb85dc0e06626ccef4b7c72d35cca1f23f3c3.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:17:25 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:17:26 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:17:26 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:17:26 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:17:26 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:17:26 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:17:26 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:17:26 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 14:17:26 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 14:17:26 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 47ms (Views: 12.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 14:17:26 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 37ms (Views: 16.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 14:18:26 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 1694ms (Views: 1691.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 14:18:28 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 14:18:28 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 14:18:28 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 14:18:28 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 14:18:28 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 14:18:28 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 14:18:28 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 14:18:29 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 14:18:29 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 14:18:29 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 14:18:29 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 14:18:29 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 14:18:29 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 14:18:29 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 14:18:29 -0700
+
+
+Started GET "/assets/event_index_item.self-9fe37191f6565886817f2f1ca38f169671feb7800a688020c454d1fa4336993a.js?body=1" for ::1 at 2015-08-12 14:18:29 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 14:18:30 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 14:18:30 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 14:18:30 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 14:18:30 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 14:18:30 -0700
+
+
+Started GET "/assets/event_index.self-f7848456f5d004796bca6e0345194d2692e96e84de9f33d55576ee42d9180e64.js?body=1" for ::1 at 2015-08-12 14:18:30 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 14:18:30 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 14:18:30 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 14:18:30 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 14:18:30 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 14:18:31 -0700
+
+
+Started GET "/assets/views/event_index_item.self-1b5f3887294dccbd5a19adcba60fb85dc0e06626ccef4b7c72d35cca1f23f3c3.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 14:18:32 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:33 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:33 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:33 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:33 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:33 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:33 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:33 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:33 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 14:18:33 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 14:18:33 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 53ms (Views: 12.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 14:18:34 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 39ms (Views: 16.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 14:18:47 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 2963ms (Views: 2959.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-7de68c94454be7b6467d1d75cd0db29ffc0551eb563e97f87b10642653e741d9.css?body=1" for ::1 at 2015-08-12 14:18:50 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 14:18:50 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 14:18:50 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 14:18:50 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 14:18:50 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 14:18:50 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 14:18:51 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 14:18:51 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 14:18:51 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 14:18:51 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 14:18:51 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 14:18:51 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 14:18:51 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 14:18:51 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 14:18:51 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 14:18:52 -0700
+
+
+Started GET "/assets/event_index_item.self-0c1f8534b8853bc4cb08fbbe6138858c357dda73a63e12ab0acc388ff9d3426d.js?body=1" for ::1 at 2015-08-12 14:18:52 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 14:18:52 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 14:18:52 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 14:18:52 -0700
+
+
+Started GET "/assets/capstone_project.self-5fa4361f5e87f000179d8f0a351a4a48a996c8fbc7b8a46ce147919eda929cf5.js?body=1" for ::1 at 2015-08-12 14:18:52 -0700
+
+
+Started GET "/assets/event_index.self-f7848456f5d004796bca6e0345194d2692e96e84de9f33d55576ee42d9180e64.js?body=1" for ::1 at 2015-08-12 14:18:52 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 14:18:52 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 14:18:52 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 14:18:52 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/nav_show.self-f8b6cf9ca8a873060152e74af52bb0282dad0c4920fce4ee7c9eb7c825742d3c.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/collections/events.self-19ade02e9222fd399b08e57752b169a470f7729b57be4c29a5ce91a1547255f1.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 14:18:53 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/views/event_index.self-24f6944f8d2b7e34d9c20015544f667cbfddab8e0a7aea9cae45be6ac163fede.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/views/event_index_item.self-1b5f3887294dccbd5a19adcba60fb85dc0e06626ccef4b7c72d35cca1f23f3c3.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/views/nav_show.self-dcfd94b0ef3e079777ba2f8e8b4391af91ad9188ed618c3af06f43ef1678c30d.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/views/post_form.self-dbf0533643658a92094fc9ba9d98e399c5d650beea17b50e22ecb6de583fcf89.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 14:18:54 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 14:18:55 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:55 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:55 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:55 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:55 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:55 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:55 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:55 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 14:18:55 -0700
+
+
+Started GET "/assets/application.self-e088abdec24c652728c331cc53f5d2286e096b6080fa2bacfba79c56847e932e.js?body=1" for ::1 at 2015-08-12 14:18:55 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 14:18:56 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 52ms (Views: 27.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 14:18:56 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 39ms (Views: 15.2ms | ActiveRecord: 1.8ms)
