@@ -11,7 +11,7 @@ class Api::EventsController < ApplicationController
   end
 
   def index
-    @events = current_user.events
+    @events = params[:type] == "scheduled" ? current_user.scheduled_events : current_user.pending_events
     render json: @events
   end
 

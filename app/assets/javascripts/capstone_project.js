@@ -5,10 +5,11 @@ window.CapstoneProject = {
   Routers: {},
   initialize: function(options) {
     CapstoneProject.USERNAME = options.USERNAME;
-    
+
     var router = new CapstoneProject.Routers.Router({
       $rootEl: $(".content"),
-      events: CapstoneProject.Collections.events,
+      scheduledEvents: CapstoneProject.Collections.scheduledEvents,
+      pendingEvents: CapstoneProject.Collections.pendingEvents,
       forums: CapstoneProject.Collections.forums,
     });
 

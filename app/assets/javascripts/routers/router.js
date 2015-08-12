@@ -1,7 +1,8 @@
 CapstoneProject.Routers.Router = Backbone.Router.extend({
   initialize: function(options) {
     this.$rootEl = options.$rootEl;
-    this.events = options.events;
+    this.scheduledEvents = options.scheduledEvents;
+    this.pendingEvents = options.pendingEvents;
     this.forums = options.forums;
   },
 
@@ -13,8 +14,13 @@ CapstoneProject.Routers.Router = Backbone.Router.extend({
   },
 
   eventIndex: function() {
-    this.events.fetch();
-    var view = new CapstoneProject.Views.EventIndex({ collection: this.events });
+    this.scheduledEvents.fetch({ data: { type: "scheduled" }});
+    this.pendingEvents.fetch({ data: { type: "pending" }});
+
+    var view = new CapstoneProject.Views.EventIndex({
+      scheduledEvents: this.scheduledEvents,
+      pendingEvents: this.pendingEvents
+    });
     this._swapView(view);
   },
 
@@ -31,7 +37,7 @@ CapstoneProject.Routers.Router = Backbone.Router.extend({
   },
 
   eventShow: function(id) {
-    var event = this.events.getOrFetch(id);
+    var event = this.scheduledEvents.getOrFetch(id) || this.pendingEvents.getOrFetch(id);
     var view = new CapstoneProject.Views.EventShow({ model: event });
     this._swapView(view);
   },

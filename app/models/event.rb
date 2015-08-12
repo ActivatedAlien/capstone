@@ -13,4 +13,12 @@ class Event < ActiveRecord::Base
     self.owner_id = current_user.id
     Signup.create(event_id: self.id, attendee_id: self.owner_id)
   end
+
+  def slots_left
+    self.num_slots - this.signups.count
+  end
+
+  def is_full?
+    slots_left == 0
+  end
 end
