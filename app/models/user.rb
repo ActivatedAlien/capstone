@@ -9,6 +9,12 @@ class User < ActiveRecord::Base
   has_many :events, foreign_key: :owner_id
   has_many :forums, foreign_key: :author_id
 
+  has_many :invites, foreign_key: :invitee_id, class_name: "Invite"
+  has_many :pending_events, through: :invites, source: :event
+
+  has_many :signups, foreign_key: :attendee_id, class_name: "Signup"
+  has_many :scheduled_events, through: :signups, source: :event
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
