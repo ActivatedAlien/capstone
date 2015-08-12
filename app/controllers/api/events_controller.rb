@@ -1,6 +1,8 @@
 class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
+    @event.register_user
+
     if @event.save
       render json: @event
     else
@@ -26,6 +28,6 @@ class Api::EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:owner_id, :time, :num_slots, :address, :description)
+    params.require(:event).permit(:time, :num_slots, :address, :description)
   end
 end

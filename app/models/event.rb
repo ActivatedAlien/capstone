@@ -8,4 +8,9 @@ class Event < ActiveRecord::Base
 
   has_many :signups
   has_many :attendees, through: :signups
+
+  def register_user
+    self.owner_id = current_user.id
+    Signup.create(event_id: self.id, attendee_id: self.owner_id)
+  end
 end
