@@ -7,12 +7,19 @@ CapstoneProject.Views.EventIndex = Backbone.CompositeView.extend({
       this.listenTo(this.scheduledEvents, "sync add remove", this.render);
       this.listenTo(this.pendingEvents, "sync add remove", this.render);
       this.listenTo(this.pendingEvents, "signup", this.handleSignup);
+      this.listenTo(this.pendingEvents, "decline-signup", this.declineSignup);
     },
 
     handleSignup: function(signup) {
       var event = this.pendingEvents.get(signup.get('event_id'));
       this.scheduledEvents.add(event);
       this.pendingEvents.remove(event);
+    },
+
+    declineSignup: function(signup) {
+      var event = this.pendingEvents.get(signup.get('event_id'));
+      this.pendingEvents.remove(event);
+      signup.destroy;
     },
 
     render: function() {

@@ -42,13 +42,8 @@ CapstoneProject.Views.PendingEventIndexItem = Backbone.View.extend({
     });
     signup.save({}, {
       success: function() {
-        signup.destroy({
-          data: { id: signup.id },
-          success: function() {
-            Backbone.history.navigate("#", { trigger: true });
-          }
-        });
-      }
+        this.model.trigger("decline-signup", signup);
+      }.bind(this)
     });
   }
 
