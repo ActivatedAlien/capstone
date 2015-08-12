@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :events, only: [:create, :index, :show, :destroy]
     resources :forums, only: [:create, :index, :show, :destroy]
     resources :posts, only: [:create, :destroy]
+    resources :invites, only: [:create, :destroy]
+    resources :signups, only: [:create, :destroy]
   end
 
   root to: "static_pages#index"
