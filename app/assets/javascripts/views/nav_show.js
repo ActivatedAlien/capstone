@@ -8,5 +8,10 @@ CapstoneProject.Views.NavShow = Backbone.View.extend({
 
   initialize: function(options) {
     this.router = options.router;
+    this.listenTo(this.router, "route", this.handleRouting);
+  },
+
+  handleRounting: function(tag, params) {
+
   }
 });

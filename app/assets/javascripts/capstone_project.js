@@ -3,7 +3,9 @@ window.CapstoneProject = {
   Collections: {},
   Views: {},
   Routers: {},
-  initialize: function() {
+  initialize: function(options) {
+    CapstoneProject.USERNAME = options.USERNAME;
+    
     var router = new CapstoneProject.Routers.Router({
       $rootEl: $(".content"),
       events: CapstoneProject.Collections.events,
@@ -19,7 +21,3 @@ window.CapstoneProject = {
     Backbone.history.start();
   }
 };
-
-$(document).ready(function(){
-  CapstoneProject.initialize();
-});

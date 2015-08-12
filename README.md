@@ -9,14 +9,14 @@ Mafia with Strangers brings together strangers for great games of Mafia. Users c
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [ ] Create accounts
-- [ ] Create sessions (log in)
+- [x] Create accounts
+- [x] Create sessions (log in)
 - [ ] Create Mafia events
 - [ ] Search for events
 - [ ] Sign up for events
 - [ ] Invite other users to events
 - [ ] Edit events, notifying users signed up for that event
-- [ ] Post to threads in a forum
+- [x] Post to threads in a forum
 
 ## Design Docs
 * [View Wireframes][views]
