@@ -5,8 +5,8 @@ class Signup < ActiveRecord::Base
   belongs_to :event
   belongs_to :attendee, foreign_key: :attendee_id, class_name: "User"
 
-  def register_user
-    self.attendee_id = current_user.id
+  def register_user(user)
+    self.attendee_id = user.id
     invite = Invite.find_by_event_id_and_invitee_id(self.event.id, self.attendee_id)
     invite.destroy! if invite
   end

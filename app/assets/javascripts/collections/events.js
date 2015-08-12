@@ -20,5 +20,5 @@ CapstoneProject.Collections.Events = Backbone.Collection.extend({
   }
 });
 
-CapstoneProject.Collections.scheduledEvents = new CapstoneProject.Collections.Events();
-CapstoneProject.Collections.pendingEvents = new CapstoneProject.Collections.Events();
+CapstoneProject.Collections.ScheduledEvents = new CapstoneProject.Collections.Events();
+CapstoneProject.Collections.PendingEvents = new CapstoneProject.Collections.Events();

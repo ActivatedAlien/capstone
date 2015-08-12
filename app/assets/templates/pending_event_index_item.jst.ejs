@@ -1,0 +1,10 @@
+<a class="list-group-item" href="#/events/<%= event.id %>">
+  <%= new Date(event.escape("time")).toLocaleString() %>
+  <br>
+  <%= event.escape("address") %>
+  <br>
+</a>
+<div class="btn-group" role="group">
+  <button type="button" class="accept-button btn btn-default">Accept</button>
+  <button type="button" class="decline-button btn btn-default">Decline</button>
+</div>

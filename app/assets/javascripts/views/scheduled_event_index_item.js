@@ -1,5 +1,5 @@
-CapstoneProject.Views.EventIndexItem = Backbone.View.extend({
-  template: JST['event_index_item'],
+CapstoneProject.Views.ScheduledEventIndexItem = Backbone.View.extend({
+  template: JST['scheduled_event_index_item'],
 
   attributes: {
     className: "list-group",

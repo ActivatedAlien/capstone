@@ -1,7 +1,7 @@
 class Api::SignupsController < ApplicationController
   def create
-    @signup = Signup.new(params[:event_id])
-    @signup.register_user
+    @signup = Signup.new(signup_params)
+    @signup.register_user(current_user)
 
     if @signup.save
       render json: @signup
@@ -14,5 +14,10 @@ class Api::SignupsController < ApplicationController
     @signup = Signup.find(params[:id])
     @signup.destroy!
     render json: @signup
+  end
+
+  private
+  def signup_params
+    params.require(:signup).permit(:event_id)
   end
 end
