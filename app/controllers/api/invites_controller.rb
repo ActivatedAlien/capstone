@@ -1,7 +1,8 @@
 class Api::InvitesController < ApplicationController
   def create
     @invite = Invite.new(invite_params)
-    @invite.invitee_id = current_user.id
+    fail
+    @invite.set_invitee(User.find_by_username(params[:username]))
 
     if @invite.save
       render json: @invite
@@ -18,6 +19,6 @@ class Api::InvitesController < ApplicationController
 
   private
   def invite_params
-    params.require(:invite).permit(:invitee_id, :event_id)
+    params.require(:invite).permit(:event_id)
   end
 end

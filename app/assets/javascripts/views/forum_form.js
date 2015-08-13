@@ -19,7 +19,7 @@ CapstoneProject.Views.ForumForm = Backbone.View.extend({
     var forum = this.model, forums = this.collection;
     forum.set(attrs);
 
-    forum.save(attrs, {
+    forum.save({}, {
       success: function() {
         forums.add(forum);
       }

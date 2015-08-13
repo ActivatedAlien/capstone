@@ -7,3 +7,15 @@ Address: <%= event.escape("address") %>
 Number of Slots: <%= event.escape("num_slots") %>
 <br>
 Description: <%= event.escape("description") %>
+<br>
+<br>
+
+<h3>Attendees:</h3>
+<ul class="attendees">
+
+</ul>
+
+<% if (event.escape("owner_id") === CapstoneProject.USER_ID) {  %>
+  <div class="invite-form">
+  </div>
+<% } %>

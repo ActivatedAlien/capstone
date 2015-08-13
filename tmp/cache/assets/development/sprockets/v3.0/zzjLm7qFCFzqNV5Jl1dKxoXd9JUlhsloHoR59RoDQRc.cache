@@ -1,0 +1,1 @@
+I"function(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<form>\n  <label>Username: </label>\n  <input type=\'text\' name=\'username\'> <br>\n\n  <input type=\'submit\' value=\'Invite User\'>\n</form>\n');}return __p.join('');}:ET

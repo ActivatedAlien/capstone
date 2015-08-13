@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
     user = User.find_by_username(username)
     user && user.verify_password?(password) ? user : nil
   end
-
+  
   def self.generate_session_token
     SecureRandom::urlsafe_base64(16)
   end

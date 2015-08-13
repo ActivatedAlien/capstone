@@ -15,6 +15,6 @@ CapstoneProject.Models.Forum = Backbone.Model.extend({
     }
 
     return response;
-  },
+  }
 
 });
