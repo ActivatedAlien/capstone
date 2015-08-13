@@ -12,7 +12,9 @@
       </div>
       <script type="text/javascript">
           $(function () {
-              $('#datetimepicker').datetimepicker();
+              $('#datetimepicker').datetimepicker({
+                defaultDate: "<%= value %>"
+              });
           });
       </script>
   </div>
