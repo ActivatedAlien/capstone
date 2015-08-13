@@ -32,14 +32,14 @@ CapstoneProject.Views.EventShow = Backbone.CompositeView.extend({
     var $target = $(event.currentTarget);
     var elementType = "input_field";
     var attribute = $target.data("field");
-    var inputType = "text"
+    var inputType = "text";
 
     if (attribute === "time") {
-      elementType = "input_date_time_picker"
+      elementType = "input_date_time_picker";
     } else if (attribute === "description") {
       elementType = "input_textarea";
     } else if (attribute === "num_slots") {
-      inputType = "number"
+      inputType = "number";
     }
 
     $target.html(this.inputElement(elementType, attribute, inputType));
