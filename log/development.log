@@ -267,3 +267,1734 @@ Processing by Api::EventsController#index as JSON
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
   [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
 Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 17:52:51 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `USERNAME' for CapstoneProject:Module):
+    3: <head>
+    4:   <title>CapstoneProject</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all' %>
+    6:   <%= javascript_include_tag 'application' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/templates/nav_show.jst.ejs.erb:39:in `_evaluate_template'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1138317290899778033_70130026877300'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.1ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.9ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 17:57:14 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  Rendered static_pages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 395ms (Views: 394.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-7d0ebf9a12a584d64d52b9ddec5c09fc34516a6cf2378c9b44f298e3755d3127.css?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/moment.self-7c169710367e715cec0e7768bb92b9339f5a767a109041e9e9861a0abc0afa44.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-953135ed994cc31cc9cfec48a266ddfc2017dce124e3a2d0503f69d3c31ed8be.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/capstone_project.self-995c0432ff2d7c0952e49dc366e0fa8dd1035b7c7cc90d0d7469c153df087938.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/event_form.self-0385efac52b65945dc9f14927fe36bec79a7fc414b8a043946665713afce0acb.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/nav_show.self-8aa18bfb704205cd57301ca365815508f08a96f48e7399b21467cbfcd456f1b4.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/event_index.self-bb7baa4f04cd5003b5367d567a422ca33bfcb4232fb8f36215239fa3a03daa1e.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/pending_event_index_item.self-5c1f4f1b51ddaa971c5b21a9922b85266cfa5ded825698750406630c1fcb7f91.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/scheduled_event_index_item.self-a30fd4fa1e998e40398ab0ab2727a805c68b5d247d4150cad3223186a87c9c72.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/models/invite.self-32ac5ef34d333767c18870ef4ecc4fabdbe0a60fb6eb6d32b920c189baf4fc85.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/models/signup.self-c07b5415a979433c3e5e9189e2ba7b31caeb2f394435b020b71d92d10f9997c0.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/collections/events.self-fb58d8bc734f4c18192cfde716f78ce590a7da3a402d9840c440ea2ee33a8268.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/event_form.self-0328689f23d5a2e1e38c9fd29fa8d0c412afff3fcd4cbb43f6d793e1337f7760.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/event_index.self-dfd4bf04ce446758069e27f1a9a57cd9344db16d1014d02bbe0aa3373158c3af.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/nav_show.self-93f7f1db5b665a04f9c0f581018dd0a1a37f8f26bce75fe97d83bbaba8339ea0.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/pending_event_index_item.self-023ff1e1f496dee48a9b636fcde075738f25f06ed0f24e56ce8d340119c95512.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/post_form.self-bb0db4d34fb30cf69af553b12d89cebd1de7f1ed7df863b1f244fd3287e8d80f.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/views/scheduled_event_index_item.self-f61621e7f858054001a7c6659b474d39ec139c0b5817dc4d7d943086474b0f9a.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/assets/application.self-ba159da836afb518b67b26b4b2d8f3b8e9e2eb9092c9e2db25b335f06d608748.js?body=1" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 17:57:15 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 17:57:15 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-08-12 17:57:15 -0700
+
+
+Started DELETE "/session" for ::1 at 2015-08-12 17:57:17 -0700
+Processing by SessionsController#destroy as */*
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ar_oWlINyzoQp4HdQS9Hjw"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "XSZGOZy3Vav0iYEQJkdmiQ"], ["updated_at", "2015-08-13 00:57:17.894835"], ["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started DELETE "/session/new" for ::1 at 2015-08-12 17:57:17 -0700
+
+ActionController::RoutingError (No route matches [DELETE] "/session/new"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.0ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.1ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 17:59:06 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 214ms (Views: 213.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 17:59:46 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered static_pages/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+     7: 
+     8: <script type="text/javascript">
+     9:   CapstoneProject.initialize({
+    10:     USERNAME: "<%= current_user.username %>",
+    11:     USER_ID: "<%= current_user.id  %>"
+    12:   });
+    13: </script>
+  app/views/static_pages/index.html.erb:10:in `_app_views_static_pages_index_html_erb___131008647689437600_70130026911080'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (26.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 17:59:51 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+  Rendered static_pages/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+     7: 
+     8: <script type="text/javascript">
+     9:   CapstoneProject.initialize({
+    10:     USERNAME: "<%= current_user.username %>",
+    11:     USER_ID: "<%= current_user.id  %>"
+    12:   });
+    13: </script>
+  app/views/static_pages/index.html.erb:10:in `_app_views_static_pages_index_html_erb___131008647689437600_70130026911080'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.1ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.6ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:00:00 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 368ms (Views: 367.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/views/nav_show.self-a3a2bc9feeebb555bea0992c50e171ca817b7ca8efd927bf5e3dc3de0bbe7e25.js?body=1" for ::1 at 2015-08-12 18:00:01 -0700
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:00:01 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 202ms (Views: 201.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2015-08-12 18:00:05 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"uc6Bv7WsrJzTUiHzk4mbiNJkF6KTpo5udAxkfGgaZdh1EvlfwVyyt4cARBLjCtZacTEKk/W187/FH0DUQUZ6FA==", "user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "test"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "r7a5AItbLLcf2QL3zI2fRg"], ["updated_at", "2015-08-13 01:00:05.715080"], ["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 18:00:05 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "r7a5AItbLLcf2QL3zI2fRg"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "r7a5AItbLLcf2QL3zI2fRg"]]
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 222ms (Views: 221.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 18:00:06 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "r7a5AItbLLcf2QL3zI2fRg"]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 18:00:06 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "r7a5AItbLLcf2QL3zI2fRg"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/session" for ::1 at 2015-08-12 18:00:10 -0700
+Processing by SessionsController#destroy as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "r7a5AItbLLcf2QL3zI2fRg"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "H5hU0LGfHTP7kZ-2c-qCZA"], ["updated_at", "2015-08-13 01:00:10.193513"], ["id", 2]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started DELETE "/session/new" for ::1 at 2015-08-12 18:00:10 -0700
+
+ActionController::RoutingError (No route matches [DELETE] "/session/new"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.6ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (26.2ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 18:00:19 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered static_pages/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+     7: 
+     8: <script type="text/javascript">
+     9:   CapstoneProject.initialize({
+    10:     USERNAME: "<%= current_user.username %>",
+    11:     USER_ID: "<%= current_user.id  %>"
+    12:   });
+    13: </script>
+  app/views/static_pages/index.html.erb:10:in `_app_views_static_pages_index_html_erb___131008647689437600_70130026911080'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.6ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.9ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:00:22 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 211ms (Views: 210.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:00:22 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 214ms (Views: 213.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2015-08-12 18:00:27 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3kDi72YB3DM+prOnSgaQVu8SXdgg7cdXjbwTygbdAzoSnJoPEvHCGGr01kY6hd2ETEdA6Ub+uoY8rzdiL4Ec9g==", "user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "test"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ELG89lazvPLODklJo7EYUA"], ["updated_at", "2015-08-13 01:00:27.249919"], ["id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 75ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 18:00:27 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ELG89lazvPLODklJo7EYUA"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "ELG89lazvPLODklJo7EYUA"]]
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 227ms (Views: 226.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 18:00:27 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ELG89lazvPLODklJo7EYUA"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 18:00:27 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ELG89lazvPLODklJo7EYUA"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/session" for ::1 at 2015-08-12 18:00:30 -0700
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "ELG89lazvPLODklJo7EYUA"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "iIurtaf_FTpkupaxrWrlsA"], ["updated_at", "2015-08-13 01:00:30.290561"], ["id", 2]]
+  [1m[35m (6.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 10ms (ActiveRecord: 6.6ms)
+
+
+Started DELETE "/session/new" for ::1 at 2015-08-12 18:00:30 -0700
+
+ActionController::RoutingError (No route matches [DELETE] "/session/new"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (5.5ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.9ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 18:01:27 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+  Rendered static_pages/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+     7: 
+     8: <script type="text/javascript">
+     9:   CapstoneProject.initialize({
+    10:     USERNAME: "<%= current_user.username %>",
+    11:     USER_ID: "<%= current_user.id  %>"
+    12:   });
+    13: </script>
+  app/views/static_pages/index.html.erb:10:in `_app_views_static_pages_index_html_erb___131008647689437600_70130026911080'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.1ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.9ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (24.9ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:01:29 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 332ms (Views: 331.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/views/nav_show.self-a652c4f8a3151f73706a161d992b6c4b63aae256f76f4bd8acb13001c5456622.js?body=1" for ::1 at 2015-08-12 18:01:29 -0700
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:01:31 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 184ms (Views: 183.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2015-08-12 18:01:35 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GJlXEb2Q6PRCnTT0dtE6B79sJ7lv4uL7jjG6jfJu/YLURS/xyWD23xbPURUGUnfVHDk6iAnxnyo/Ip4l2zLiTg==", "user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "test"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"], ["updated_at", "2015-08-13 01:01:35.447780"], ["id", 2]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 18:01:35 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  Rendered static_pages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 236ms (Views: 235.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 18:01:35 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 18:01:35 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 18:01:44 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  Rendered static_pages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 201ms (Views: 200.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-7d0ebf9a12a584d64d52b9ddec5c09fc34516a6cf2378c9b44f298e3755d3127.css?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/moment.self-7c169710367e715cec0e7768bb92b9339f5a767a109041e9e9861a0abc0afa44.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-953135ed994cc31cc9cfec48a266ddfc2017dce124e3a2d0503f69d3c31ed8be.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/capstone_project.self-995c0432ff2d7c0952e49dc366e0fa8dd1035b7c7cc90d0d7469c153df087938.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/event_form.self-0385efac52b65945dc9f14927fe36bec79a7fc414b8a043946665713afce0acb.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/event_index.self-bb7baa4f04cd5003b5367d567a422ca33bfcb4232fb8f36215239fa3a03daa1e.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/nav_show.self-8aa18bfb704205cd57301ca365815508f08a96f48e7399b21467cbfcd456f1b4.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/pending_event_index_item.self-5c1f4f1b51ddaa971c5b21a9922b85266cfa5ded825698750406630c1fcb7f91.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/scheduled_event_index_item.self-a30fd4fa1e998e40398ab0ab2727a805c68b5d247d4150cad3223186a87c9c72.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/models/invite.self-32ac5ef34d333767c18870ef4ecc4fabdbe0a60fb6eb6d32b920c189baf4fc85.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/models/signup.self-c07b5415a979433c3e5e9189e2ba7b31caeb2f394435b020b71d92d10f9997c0.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/collections/events.self-fb58d8bc734f4c18192cfde716f78ce590a7da3a402d9840c440ea2ee33a8268.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/event_form.self-0328689f23d5a2e1e38c9fd29fa8d0c412afff3fcd4cbb43f6d793e1337f7760.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/event_index.self-dfd4bf04ce446758069e27f1a9a57cd9344db16d1014d02bbe0aa3373158c3af.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/nav_show.self-a652c4f8a3151f73706a161d992b6c4b63aae256f76f4bd8acb13001c5456622.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/pending_event_index_item.self-023ff1e1f496dee48a9b636fcde075738f25f06ed0f24e56ce8d340119c95512.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/post_form.self-bb0db4d34fb30cf69af553b12d89cebd1de7f1ed7df863b1f244fd3287e8d80f.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/views/scheduled_event_index_item.self-f61621e7f858054001a7c6659b474d39ec139c0b5817dc4d7d943086474b0f9a.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/assets/application.self-ba159da836afb518b67b26b4b2d8f3b8e9e2eb9092c9e2db25b335f06d608748.js?body=1" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 18:01:45 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 18:01:45 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-08-12 18:01:45 -0700
+
+
+Started GET "/" for ::1 at 2015-08-12 18:01:58 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  Rendered static_pages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 434ms (Views: 433.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-7d0ebf9a12a584d64d52b9ddec5c09fc34516a6cf2378c9b44f298e3755d3127.css?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/moment.self-7c169710367e715cec0e7768bb92b9339f5a767a109041e9e9861a0abc0afa44.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-953135ed994cc31cc9cfec48a266ddfc2017dce124e3a2d0503f69d3c31ed8be.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/capstone_project.self-995c0432ff2d7c0952e49dc366e0fa8dd1035b7c7cc90d0d7469c153df087938.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/event_form.self-0385efac52b65945dc9f14927fe36bec79a7fc414b8a043946665713afce0acb.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/event_index.self-bb7baa4f04cd5003b5367d567a422ca33bfcb4232fb8f36215239fa3a03daa1e.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/nav_show.self-8aa18bfb704205cd57301ca365815508f08a96f48e7399b21467cbfcd456f1b4.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/pending_event_index_item.self-5c1f4f1b51ddaa971c5b21a9922b85266cfa5ded825698750406630c1fcb7f91.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/scheduled_event_index_item.self-a30fd4fa1e998e40398ab0ab2727a805c68b5d247d4150cad3223186a87c9c72.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/models/invite.self-32ac5ef34d333767c18870ef4ecc4fabdbe0a60fb6eb6d32b920c189baf4fc85.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/models/signup.self-c07b5415a979433c3e5e9189e2ba7b31caeb2f394435b020b71d92d10f9997c0.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/collections/events.self-fb58d8bc734f4c18192cfde716f78ce590a7da3a402d9840c440ea2ee33a8268.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/event_form.self-0328689f23d5a2e1e38c9fd29fa8d0c412afff3fcd4cbb43f6d793e1337f7760.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/event_index.self-dfd4bf04ce446758069e27f1a9a57cd9344db16d1014d02bbe0aa3373158c3af.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/nav_show.self-b6bcf9390d070c913cc89dcb39be509a4146d47f445b8da50a7d1bd1b248572f.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/pending_event_index_item.self-023ff1e1f496dee48a9b636fcde075738f25f06ed0f24e56ce8d340119c95512.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/post_form.self-bb0db4d34fb30cf69af553b12d89cebd1de7f1ed7df863b1f244fd3287e8d80f.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/views/scheduled_event_index_item.self-f61621e7f858054001a7c6659b474d39ec139c0b5817dc4d7d943086474b0f9a.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/assets/application.self-ba159da836afb518b67b26b4b2d8f3b8e9e2eb9092c9e2db25b335f06d608748.js?body=1" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 18:01:58 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 18:01:58 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-08-12 18:01:58 -0700
+
+
+Started GET "/" for ::1 at 2015-08-12 18:02:16 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  Rendered static_pages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 201ms (Views: 200.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-7d0ebf9a12a584d64d52b9ddec5c09fc34516a6cf2378c9b44f298e3755d3127.css?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-08-12 18:02:16 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/moment.self-7c169710367e715cec0e7768bb92b9339f5a767a109041e9e9861a0abc0afa44.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-953135ed994cc31cc9cfec48a266ddfc2017dce124e3a2d0503f69d3c31ed8be.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/serialize_json.self-f1f8d607ceafcdff4d28094a1a0e603c7a82edcb5fd81960120017b1c6e6bf4e.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/backbone.self-4ac1c9ebee6ebcd1614a8f92d41cb270e61e0b8f61c804c0d1b26fda4b889824.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/capstone_project.self-995c0432ff2d7c0952e49dc366e0fa8dd1035b7c7cc90d0d7469c153df087938.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/event_form.self-0385efac52b65945dc9f14927fe36bec79a7fc414b8a043946665713afce0acb.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/event_index.self-bb7baa4f04cd5003b5367d567a422ca33bfcb4232fb8f36215239fa3a03daa1e.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/event_show.self-c5909d0c91538dba5fdb4c91df491ba356517b0530a99d32a392d6cf7b87c186.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/forum_form.self-7c22c5ed4fa117fe69d70ce41782ac394ae1775e918dc89b3e3a07ff622fd26c.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/forum_index.self-bd009ace5c67925794bd4876e31fd7755fbece86fa4d4b3f7dbc5e722c21125d.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/forum_index_item.self-4365abab61b7117dfd1357c71f32eb2972fc46b11158dcaa77a6c9e025e578ad.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/forum_show.self-a6beb9c3255615cbfd1def6818c7788fbe28f021be3e53b7792f15907388d8da.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/nav_show.self-8aa18bfb704205cd57301ca365815508f08a96f48e7399b21467cbfcd456f1b4.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/pending_event_index_item.self-5c1f4f1b51ddaa971c5b21a9922b85266cfa5ded825698750406630c1fcb7f91.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/post_form.self-cafaf738e2c6cdec078d97484b2ae8ad1bbe0203eade7de0d4ce61dc7ea45cad.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/post_item.self-1ce516cc7290bb4fcc44bc1af173e9b3f04c3d81bcad8c70622645765c3819a3.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/scheduled_event_index_item.self-a30fd4fa1e998e40398ab0ab2727a805c68b5d247d4150cad3223186a87c9c72.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/utils/composite_view.self-ae3948e953312d3e050f4baf312fdaea87b998a104d2eece8f5b81287ad1a4f7.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/models/event.self-f43b2fb6b0f5fa56482621e20cc6a7f616687afe24e1a076a445edfe05fdef02.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/models/forum.self-2ef9e96521e235ed9f78f38c33d477cdbebc232ef4b2c12bf90d69e5e4af9f23.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/models/invite.self-32ac5ef34d333767c18870ef4ecc4fabdbe0a60fb6eb6d32b920c189baf4fc85.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/models/post.self-cb5d6c518fc081372979f9de9d7f5fa8eab64e6b8e3a739ecb2ebb28f7b68f2c.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/models/signup.self-c07b5415a979433c3e5e9189e2ba7b31caeb2f394435b020b71d92d10f9997c0.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/collections/events.self-fb58d8bc734f4c18192cfde716f78ce590a7da3a402d9840c440ea2ee33a8268.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/collections/forums.self-5e6676128c1b91a02b8c20c6ebc49c1a867bae40d6dbc1cf1878dd0f5d42f87a.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/collections/posts.self-27f483f24f2ace576dfd45d9145a50c9da435b65304cb30e86211090540ad5c4.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/event_form.self-0328689f23d5a2e1e38c9fd29fa8d0c412afff3fcd4cbb43f6d793e1337f7760.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/event_index.self-dfd4bf04ce446758069e27f1a9a57cd9344db16d1014d02bbe0aa3373158c3af.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/event_show.self-34c2150ebc63ed636bc3f5d5fb9093529701d0a26fdaa142fa38869447e98540.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/forum_form.self-69f818f35e7e2e2a91266eb13ace965e7e9614770882c2ca3b616199adde6dcc.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/forum_index.self-e76c928a28b37b6d021fd3d2f10f91562ae35d3008cec3af0211123febc15ed8.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/forum_index_item.self-b8bf654571fb6e5004b9799cc9b5195b5a7b4d324f5babd6c0dabbc97bb381f7.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/forum_show.self-4792edf65fc445eceb0f97a37b61e5fbcaea1f581c2a04cd2a2574c1d76e45f5.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/nav_show.self-a3a2bc9feeebb555bea0992c50e171ca817b7ca8efd927bf5e3dc3de0bbe7e25.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/pending_event_index_item.self-023ff1e1f496dee48a9b636fcde075738f25f06ed0f24e56ce8d340119c95512.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/post_form.self-bb0db4d34fb30cf69af553b12d89cebd1de7f1ed7df863b1f244fd3287e8d80f.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/post_item.self-207af978af2c0693c9b17b53e05d8076a207bed09bc67ba51f26bb7681c13043.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/views/scheduled_event_index_item.self-f61621e7f858054001a7c6659b474d39ec139c0b5817dc4d7d943086474b0f9a.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/routers/router.self-2bcae7d16efe57810b7237c7feee501a5c73528e1e571a5f830dfedb7c0bf484.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/api/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/api/forums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/api/invites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/api/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/api/signups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/assets/application.self-ba159da836afb518b67b26b4b2d8f3b8e9e2eb9092c9e2db25b335f06d608748.js?body=1" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 18:02:17 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1[0m  [["attendee_id", 2]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 18:02:17 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1[0m  [["invitee_id", 2]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-08-12 18:02:17 -0700
+
+
+Started DELETE "/session" for ::1 at 2015-08-12 18:02:20 -0700
+Processing by SessionsController#destroy as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "UnUeP6We2deVIUV_aPyCyQ"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "ZG3Wn4yggsJ1HMmw3X4v0g"], ["updated_at", "2015-08-13 01:02:20.550351"], ["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started DELETE "/session/new" for ::1 at 2015-08-12 18:02:20 -0700
+
+ActionController::RoutingError (No route matches [DELETE] "/session/new"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.8ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.8ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 18:02:57 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered static_pages/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+     7: 
+     8: <script type="text/javascript">
+     9:   CapstoneProject.initialize({
+    10:     USERNAME: "<%= current_user.username %>",
+    11:     USER_ID: "<%= current_user.id  %>"
+    12:   });
+    13: </script>
+  app/views/static_pages/index.html.erb:10:in `_app_views_static_pages_index_html_erb___131008647689437600_70130026911080'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.1ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.1ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.3ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:03:00 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 398ms (Views: 397.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/views/nav_show.self-9c18052cd5f850e0ad109fbde873267ee29eb0236e58da77ed944252d49c5518.js?body=1" for ::1 at 2015-08-12 18:03:01 -0700
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:03:01 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 171ms (Views: 170.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2015-08-12 18:03:04 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"2J6MQOZqGfTCzmrg249j2NUjq0LeoabCajKrzJutjmYUQvSgkpoH35acDwGrDC4Kdna2c7iy2xPbIY9ksvGRqg==", "user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "test"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "QWe1tmTDt8QzoTHuBw0rZQ"], ["updated_at", "2015-08-13 01:03:05.021849"], ["id", 2]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 18:03:05 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "QWe1tmTDt8QzoTHuBw0rZQ"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "QWe1tmTDt8QzoTHuBw0rZQ"]]
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 230ms (Views: 229.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 18:03:05 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "QWe1tmTDt8QzoTHuBw0rZQ"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 18:03:05 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "QWe1tmTDt8QzoTHuBw0rZQ"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/session" for ::1 at 2015-08-12 18:03:08 -0700
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "QWe1tmTDt8QzoTHuBw0rZQ"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "fKdJmxkafA0qN6U2l9HT_w"], ["updated_at", "2015-08-13 01:03:08.461413"], ["id", 2]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:03:08 -0700
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 179ms (Views: 178.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session" for ::1 at 2015-08-12 18:03:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/session"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.1ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.4ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.7ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.1ms)
+
+
+Started GET "/session" for ::1 at 2015-08-12 18:03:13 -0700
+
+ActionController::RoutingError (No route matches [GET] "/session"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  newrelic_rpm (3.12.1.298) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.8ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/theinnformaster/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:03:15 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 366ms (Views: 365.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/views/nav_show.self-fd172df10bd8c8b1d87e9164575fa3098131ba979a504ef335a14db69711076b.js?body=1" for ::1 at 2015-08-12 18:03:16 -0700
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:03:17 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 169ms (Views: 168.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2015-08-12 18:03:20 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GcCaf1+FZOFiedEBCq1ZoM3VU1Xde6QTuLRkXfVHaUfVHOKfK3V6yjYrtOB6LhRyboBOZLto2cIJp0D13Bt2iw==", "user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "test"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Le8AYhDW8n5cCMcuBnJ3lQ"], ["updated_at", "2015-08-13 01:03:20.404615"], ["id", 2]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 70ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-08-12 18:03:20 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Le8AYhDW8n5cCMcuBnJ3lQ"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Le8AYhDW8n5cCMcuBnJ3lQ"]]
+  Rendered static_pages/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 186ms (Views: 185.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/events?type=pending" for ::1 at 2015-08-12 18:03:20 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"pending"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Le8AYhDW8n5cCMcuBnJ3lQ"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" INNER JOIN "invites" ON "events"."id" = "invites"."event_id" WHERE "invites"."invitee_id" = $1  [["invitee_id", 2]]
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events?type=scheduled" for ::1 at 2015-08-12 18:03:20 -0700
+Processing by Api::EventsController#index as JSON
+  Parameters: {"type"=>"scheduled"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Le8AYhDW8n5cCMcuBnJ3lQ"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" INNER JOIN "signups" ON "events"."id" = "signups"."event_id" WHERE "signups"."attendee_id" = $1  [["attendee_id", 2]]
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/session" for ::1 at 2015-08-12 18:03:22 -0700
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Le8AYhDW8n5cCMcuBnJ3lQ"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "LjsJa2ry5u3QSkYfE1OcIw"], ["updated_at", "2015-08-13 01:03:22.089649"], ["id", 2]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:03:22 -0700
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 205ms (Views: 204.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-12 18:03:22 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 194ms (Views: 193.9ms | ActiveRecord: 0.0ms)
