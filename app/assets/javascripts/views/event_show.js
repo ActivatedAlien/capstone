@@ -19,41 +19,30 @@ CapstoneProject.Views.EventShow = Backbone.CompositeView.extend({
     event.fetch();
   },
 
+  inputElement: function(elementType, attribute, inputType) {
+    return JST[elementType]({
+      attribute: attribute,
+      value: this.model.get(attribute),
+      name: "event[" + attribute + "]",
+      type: inputType
+    });
+  },
+
   allowEdit: function(event) {
     var $target = $(event.currentTarget);
-    var text = $target.text();
-    switch ($target.data("field")) {
-      case "address":
-        $target.html(JST['input_field']({
-          attribute: "address",
-          value: this.model.get("address"),
-          name: "event[address]",
-          type: "text"
-        }));
-        break;
-      case "time":
-        $target.html(JST['input_date_time_picker']({
-          attribute: "time",
-          value: this.model.get("time"),
-          name: "event[time]",
-          type: "text"
-        }));
-        break;
-      case "description":
-        $target.html(JST['input_textarea']({
-          value: this.model.get("description"),
-          name: "event[description]",
-        }));
-        break;
-      case "num-slots":
-        $target.html(JST['input_field']({
-          attribute: "num_slots",
-          value: this.model.get("num_slots"),
-          name: "event[num_slots]",
-          type: "number"
-        }));
-        break;
+    var elementType = "input_field";
+    var attribute = $target.data("field");
+    var inputType = "text"
+
+    if (attribute === "time") {
+      elementType = "input_date_time_picker"
+    } else if (attribute === "description") {
+      elementType = "input_textarea";
+    } else if (attribute === "num_slots") {
+      inputType = "number"
     }
+
+    $target.html(this.inputElement(elementType, attribute, inputType));
   },
 
   finishEdit: function(event) {
@@ -63,7 +52,6 @@ CapstoneProject.Views.EventShow = Backbone.CompositeView.extend({
 
     this.model.save({}, {
       success: function() {
-        $target.empty();
         $target.html($target.text());
       }
     });
