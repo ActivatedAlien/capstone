@@ -1,1 +1,0 @@
-I"ÿfunction(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<h3>Scheduled Events</h3>\n<ul class=\'scheduled-events\'>\n</ul>\n\n<h3>Pending Events</h3>\n<ul class=\'pending-events\'>\n</ul>\n');}return __p.join('');}:ET
