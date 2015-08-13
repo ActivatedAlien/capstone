@@ -26,6 +26,8 @@ gem 'backbone-on-rails'
 gem 'serialize_json-rails'
 gem 'ejs'
 gem 'newrelic_rpm'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.15.35'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

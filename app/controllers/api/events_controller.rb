@@ -1,9 +1,10 @@
 class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
-    @event.register_user
+    @event.register_user_and_set_time(current_user, event_params[:time])
 
     if @event.save
+      @event.auto_signup
       render json: @event
     else
       render :json => { error: "could not save" }, status: :unprocessable_entity

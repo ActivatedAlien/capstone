@@ -9,8 +9,12 @@ class Event < ActiveRecord::Base
   has_many :signups
   has_many :attendees, through: :signups
 
-  def register_user
-    self.owner_id = current_user.id
+  def register_user_and_set_time(user, time)
+    self.owner_id = user.id
+    self.time = DateTime.strptime(time, "%m/%d/%Y %H:%M %p")
+  end
+
+  def auto_signup
     Signup.create(event_id: self.id, attendee_id: self.owner_id)
   end
 

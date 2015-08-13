@@ -21,7 +21,7 @@ CapstoneProject.Views.PostForm = Backbone.View.extend({
     var post = this.model, posts = this.collection;
     post.set(attrs);
 
-    post.save(attrs, {
+    post.save({}, {
       success: function() {
         posts.add(post);
       }

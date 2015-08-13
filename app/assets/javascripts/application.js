@@ -13,6 +13,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require moment
+//= require bootstrap-datetimepicker
 //= require underscore
 //= require serialize_json
 //= require backbone

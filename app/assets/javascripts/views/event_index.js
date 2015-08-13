@@ -35,6 +35,12 @@ CapstoneProject.Views.EventIndex = Backbone.CompositeView.extend({
         view.addSubview(".pending-events", subView);
       });
 
+      var formView = new CapstoneProject.Views.EventForm({
+        scheduledEvents: this.scheduledEvents,
+        model: new CapstoneProject.Models.Event() }
+      );
+      view.addSubview(".new-event", formView);
+
       return this;
     }
 });
