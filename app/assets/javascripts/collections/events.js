@@ -1,6 +1,7 @@
 CapstoneProject.Collections.Events = Backbone.Collection.extend({
   model: CapstoneProject.Models.Event,
   url: "api/events",
+  ord: "time",
 
   getOrFetch: function(id) {
     var event = this.get(id);
