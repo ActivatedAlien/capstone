@@ -1,7 +1,6 @@
 class Api::InvitesController < ApplicationController
   def create
     @invite = Invite.new(invite_params)
-    fail
     @invite.set_invitee(User.find_by_username(params[:username]))
 
     if @invite.save

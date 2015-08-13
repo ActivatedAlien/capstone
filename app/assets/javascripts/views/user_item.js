@@ -1,4 +1,4 @@
-CapstoneProject.Views.PostItem = Backbone.View.extend({
+CapstoneProject.Views.UserItem = Backbone.View.extend({
   template: JST['user_item'],
   tagname: "<li>",
 
