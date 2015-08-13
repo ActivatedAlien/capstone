@@ -15,7 +15,7 @@ Mafia with Strangers brings together strangers for great games of Mafia. Users c
 - [ ] Search for events
 - [x] Sign up for events
 - [x] Invite other users to events
-- [ ] Edit events, notifying users signed up for that event
+- [x] Edit events
 - [x] Post to threads in a forum
 
 ## Design Docs
