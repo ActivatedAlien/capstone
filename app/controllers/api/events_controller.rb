@@ -1,7 +1,7 @@
 class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
-    @event.register_user_and_set_time(current_user, event_params[:time])
+    @event.register_user(current_user)
 
     if @event.save
       @event.auto_signup
@@ -22,6 +22,16 @@ class Api::EventsController < ApplicationController
     render :show
   end
 
+  def update
+    @event = Event.find(params[:id])
+
+    if @event.update_attributes(event_params)
+      render json: @event
+    else
+      render :json => { error: "could not update" }, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     @event = Event.find(params[:id])
     @event.destroy!
@@ -30,6 +40,10 @@ class Api::EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:time, :num_slots, :address, :description)
+    event_params = params.require(:event).permit(:time, :num_slots, :address, :description)
+    if event_params[:time]
+      event_params[:time] = DateTime.strptime(params[:event][:time], "%m/%d/%Y %H:%M %p")
+    end
+    event_params
   end
 end

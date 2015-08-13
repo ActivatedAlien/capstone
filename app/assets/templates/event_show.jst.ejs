@@ -1,12 +1,24 @@
 Owner: <%= owner.escape("username") %>
 <br>
-Time: <%= new Date(event.escape("time")).toLocaleString() %>
+Time:
+<div class="edit" data-field="time">
+  <%= new Date(event.escape("time")).toLocaleString() %>
+</div>
 <br>
-Address: <%= event.escape("address") %>
+Address:
+<div class="edit" data-field="address">
+  <%= event.escape("address") %>
+</div>
 <br>
-Number of Slots: <%= event.escape("num_slots") %>
+Number of Slots:
+<div class="edit" data-field="num-slots">
+  <%= event.escape("num_slots") %>
+</div>
 <br>
-Description: <%= event.escape("description") %>
+Description:
+<div class="edit" data-field="description">
+  <%= event.escape("description") %>
+</div>
 <br>
 <br>
 

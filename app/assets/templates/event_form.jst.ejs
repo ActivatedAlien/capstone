@@ -2,7 +2,7 @@
     <div class="row">
         <div class='col-sm-6'>
             <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
+                <div class='input-group date' id='datetimepicker'>
                     <input type='text' class="form-control" name="event[time]" />
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
@@ -12,7 +12,7 @@
         </div>
         <script type="text/javascript">
             $(function () {
-                $('#datetimepicker1').datetimepicker();
+                $('#datetimepicker').datetimepicker();
             });
         </script>
     </div>
@@ -21,7 +21,7 @@
   <input type='text' name='event[address]' value='<%= event.escape('address') %>'> <br>
 
   <label>Number of Available Spots: </label>
-  <input type='text' name='event[num_slots]' value='<%= event.escape('num_slots') %>'> <br>
+  <input type='number' name='event[num_slots]' value='<%= event.escape('num_slots') %>'> <br>
 
   <label>Description: </label>
   <textarea name="event[description]"><%= event.escape('description') %></textarea>
