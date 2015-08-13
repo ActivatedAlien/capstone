@@ -1,6 +1,6 @@
-Owner Id: <%= event.escape("owner_id") %>
+Owner: <%= owner.escape("username") %>
 <br>
-Time: <%= event.escape("time") %>
+Time: <%= new Date(event.escape("time")).toLocaleString() %>
 <br>
 Address: <%= event.escape("address") %>
 <br>
@@ -15,7 +15,12 @@ Description: <%= event.escape("description") %>
 
 </ul>
 
-<% if (event.escape("owner_id") === CapstoneProject.USER_ID) {  %>
+<h3>Invitees:</h3>
+<ul class="invitees">
+
+</ul>
+
+<% if (owner.id === parseInt(CapstoneProject.USER_ID)) {  %>
   <div class="invite-form">
   </div>
 <% } %>
